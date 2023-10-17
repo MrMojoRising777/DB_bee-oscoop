@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SeatController;
+use App\Http\Controllers\TheaterController;
+use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +26,12 @@ Route::post('/register', [AuthController::class, 'register']);
 
 // Login Routes
 Route::post('/login', [AuthController::class, 'login']);
+
+// Seats Routes
+Route::get('/seats', [SeatController::class, 'index']);
+
+// Theaters Routes
+Route::get('/theaters', [TheaterController::class, 'index']);
+
+// Booking Routes
+Route::post('/booking', [BookingController::class, 'bookSeats']);

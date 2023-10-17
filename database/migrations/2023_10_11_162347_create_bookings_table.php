@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('seat_id');
             // $table->unsignedBigInteger('user_id')->nullable();
-            $table->timestamp('booking_time');
+            $table->string('movie_name');
             $table->timestamps();
 
             $table->foreign('seat_id')->references('id')->on('seats');
